@@ -27,7 +27,7 @@ public class Studentcontroller {
     return studentService.insertStudent(st);
   }
 
-  @GetMapping("/getA11")
+  @GetMapping("/getAll")
   public List<Student> getAll() {
     return studentService.getAllStudents();
   }
