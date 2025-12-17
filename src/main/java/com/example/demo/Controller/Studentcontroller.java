@@ -40,7 +40,7 @@ public class Studentcontroller {
   @PutMapping("/update/{id}")
   public String update(@PathVariable Long id, @RequestBody Student newStudent) {
     Optional<Student> student = studentService.getOneStudent(id);
-    if (student.isPresent()) {
+    if (Student.isPresent()) {
       newStudent.setId(id);
       studentService.insertStudent(newStudent);
       return "Updated Success";
@@ -50,7 +50,7 @@ public class Studentcontroller {
 
   @DeleteMapping("/del/{id}")
   public String deleteStudent(@PathVariable Long id) {
-    Optional<Student> student = studentService.getOneStudent(id);
+    Optional<Student> Student = studentService.getOneStudent(id);
     if (student.isPresent()) {
       studentService.deleteStudent(id);
       return "Deleted Success";

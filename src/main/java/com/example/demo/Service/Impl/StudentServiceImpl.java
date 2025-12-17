@@ -21,8 +21,12 @@ public class StudentService implements StudentService{
     }
     @Override
     public Optional<student> getOneStudent(Long id){
-        
+        return str.findById(id);
+    }
 
+    @Override
+    public student deleteStudent(Long id){
+        return str.deleteById(id);
     }
     
     
