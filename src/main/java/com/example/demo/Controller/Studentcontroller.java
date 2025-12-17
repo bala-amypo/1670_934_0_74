@@ -20,7 +20,7 @@ import com.example.demo.Service.StudentService;
 @RestController
 public class Studentcontroller {
   @Autowired
-  Studentservice studentService;
+  StudentService studentService;
 
   @PostMapping("/PostStudent")
   public Student postStd(@RequestBody Student st) {
