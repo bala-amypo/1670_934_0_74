@@ -12,4 +12,7 @@ public class StudentService implements StudentService{
     @Autowired
     Studentrepo str;
     @override
+    public student insertStudent(student st){
+        return str.save(st);
+    }
 }
