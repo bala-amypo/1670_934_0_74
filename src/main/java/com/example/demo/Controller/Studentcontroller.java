@@ -51,7 +51,7 @@ public class Studentcontroller {
   @DeleteMapping("/del/{id}")
   public String deleteStudent(@PathVariable Long id) {
     Optional<Student> Student = studentService.getOneStudent(id);
-    if (student.isPresent()) {
+    if (Student.isPresent()) {
       studentService.deleteStudent(id);
       return "Deleted Success";
     }
