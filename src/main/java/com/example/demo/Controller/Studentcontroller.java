@@ -39,7 +39,7 @@ public class Studentcontroller {
 
   @PutMapping("/update/{id}")
   public String update(@PathVariable Long id, @RequestBody Student newStudent) {
-    Optional<Student> student = studentService.getOneStudent(id);
+    Optional<Student> Student = studentService.getOneStudent(id);
     if (Student.isPresent()) {
       newStudent.setId(id);
       studentService.insertStudent(newStudent);

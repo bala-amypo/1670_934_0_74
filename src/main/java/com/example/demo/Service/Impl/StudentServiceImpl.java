@@ -16,7 +16,7 @@ public class StudentServiceImpl implements StudentService{
         return str.save(st);
     }
     @Override
-    public list<Student> getAl1Students(){
+    public list<Student> getAllStudents(){
         return str.findAll(st);
     }
     @Override
