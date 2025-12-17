@@ -11,8 +11,20 @@ import com.example.demo.Service.StudentService;
 public class StudentService implements StudentService{
     @Autowired
     Studentrepo str;
-    @override
+    @Override
     public student insertStudent(student st){
         return str.save(st);
     }
+    @Override
+    public list<student> getAl1Students(){
+        return str.findAll(st);
+    }
+    @Override
+    public Optional<student> getOneStudent(Long id){
+        
+
+    }
+    
+    
+
 }
